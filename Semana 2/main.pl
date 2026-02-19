@@ -25,13 +25,12 @@ while ($ejecutar) {
     print "2. Insertar desde un Archivo\n";
     print "3. Mostrar lista desde la cabeza\n";
     print "4. Mostrar lista desde la cola\n";
-    print "5. Generar visualizacion GraphViz\n";
-    print "6. Salir\n";
+    print "5. Salir\n";
 
     my $opcion = <STDIN>;
     chomp($opcion);
 
-    if ($opcion < 1 || $opcion > 6) {
+    if ($opcion < 1 || $opcion > 5) {
 
         print "Opcion invalida. Saliendo...\n";
         $ejecutar = 0;
@@ -94,20 +93,6 @@ while ($ejecutar) {
         print "Lista desde la cola (Archivo):\n";
         $lista_archivo->mostrar_desde_cola();
 
-    } elsif ($opcion == 5) {
-
-        print "Generando visualizacion de la lista...\n";
-        print "Ingrese el nombre del archivo (sin extension): ";
-        my $nombre_archivo = <STDIN>;
-        chomp($nombre_archivo);
-        
-        # Generar visualización para la lista con archivo
-        if (defined $lista_archivo->cabeza) {
-            generar_dot($lista_archivo, $nombre_archivo);
-        } else {
-            print "La lista del archivo esta vacia.\n";
-        }
-
     } else {
 
         print "Saliendo...\n";
@@ -120,77 +105,48 @@ while ($ejecutar) {
 #funcion para generar el archivo .dot para graphviz y generar la representacion visual de la lista doblemente enlazada circular en la carpeta donde se esta ejecutando el script main.pl
 sub generar_dot {
     my ($lista, $nombre_archivo) = @_;
-    
-    # Verificar si la lista está vacía
-    return unless defined $lista->cabeza;
-    
-    # Crear el objeto GraphViz
-    my $graph = GraphViz->new(
-        directed => 1,
-        layout => 'dot',
-        rankdir => 'LR',
-        node => {
-            shape => 'record',
-            style => 'filled',
-            fillcolor => 'lightblue',
-            fontname => 'Arial'
-        },
-        edge => {
-            color => 'blue',
-            arrowsize => 0.8
-        }
-    );
-    
-    # Recorrer la lista y agregar nodos al grafo
+    open(my $fh, '>', $nombre_archivo) or die "No se pudo crear el archivo: $!";
+
+    print $fh "digraph G {\n";
+    print $fh "  rankdir=LR;\n";
+    print $fh "  node [shape=record];\n";
+
     my $actual = $lista->cabeza;
-    my $contador = 0;
-    my @nodos_ids = ();
-    
-    do {
-        my $nodo_id = "nodo$contador";
-        push @nodos_ids, $nodo_id;
-        
-        # Crear etiqueta del nodo con la información de la canción
-        my $label = "{" . $actual->titulo . "|Artista: " . $actual->artista . "|Ventas: " . $actual->ventas . "}";
-        
-        # Agregar el nodo al grafo
-        $graph->add_node($nodo_id, label => $label);
-        
-        $actual = $actual->siguiente;
-        $contador++;
-    } while ($actual != $lista->cabeza);
-    
-    # Agregar las aristas (conexiones) entre los nodos
-    for (my $i = 0; $i < scalar(@nodos_ids); $i++) {
-        my $siguiente_idx = ($i + 1) % scalar(@nodos_ids);
-        
-        # Flecha hacia adelante (siguiente)
-        $graph->add_edge($nodos_ids[$i] => $nodos_ids[$siguiente_idx], color => 'blue', label => 'sig');
-        
-        # Flecha hacia atrás (anterior)
-        $graph->add_edge($nodos_ids[$siguiente_idx] => $nodos_ids[$i], color => 'red', label => 'ant');
-    }
-    
-    # Generar el archivo de imagen
-    my $output_file = $nombre_archivo || 'lista_circular';
-    
-    # Intentar generar PNG primero, si falla intentar JPG
-    eval {
-        $graph->as_png("$output_file.png");
-        print "Imagen generada exitosamente: $output_file.png\n";
-    };
-    if ($@) {
-        eval {
-            $graph->as_jpeg("$output_file.jpg");
-            print "Imagen generada exitosamente: $output_file.jpg\n";
-        };
-        if ($@) {
-            print "Error al generar la imagen: $@\n";
-            print "Asegúrese de tener GraphViz instalado en su sistema.\n";
+    my $index = 0;
+
+    if (defined $actual) {
+        do {
+            print $fh "  node$index [label=\"{Titulo: " . $actual->titulo . " | Artista: " . $actual->artista . " | Ventas: " . $actual->ventas . "}\"];\n";
+            $actual = $actual->siguiente;
+            $index++;
+        } while ($actual != $lista->cabeza);
+
+        for (my $i = 0; $i < $index; $i++) {
+            my $next_index = ($i + 1) % $index;
+            my $prev_index = ($i - 1 + $index) % $index;
+            print $fh "  node$i -> node$next_index [label=\"siguiente\"];\n";
+            print $fh "  node$i -> node$prev_index [label=\"anterior\"];\n";
         }
     }
+
+    print $fh "}\n";
+    close($fh);
+    print "Archivo DOT generado: $nombre_archivo\n";
 }
 
+# Almacenar el código de la gráfica en una variable
+my $graph_code = "digraph G {\n";
+
+# Aquí puedes agregar nodos y aristas a la variable $graph_code
+# Ejemplo:
+# $graph_code .= "  A -> B;\n";
+
+$graph_code .= "}\n";
+
+# Generar la imagen de la gráfica
+my $graph = GraphViz->new();
+$graph->from_string($graph_code);
+$graph->as_png("output_graph.png");
+
 # Llamar a la función generar_dot después de insertar canciones
-# Ejemplo: generar_dot($lista_archivo, 'mi_lista');
 

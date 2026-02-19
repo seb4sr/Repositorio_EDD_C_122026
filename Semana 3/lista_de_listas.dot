@@ -1,0 +1,40 @@
+digraph ListaDeListas {
+rankdir=TB;
+node [shape=box, style=rounded, fontname="Arial"];
+{ rank=same;
+HEAD1 [label="Cantante 1"];
+HEAD2 [label="Cantante 2"];
+HEAD3 [label="Cantante 3"];
+HEAD4 [label="Cantante 4"];
+HEAD5 [label="Cantante 5"];
+}
+HEAD1 -> HEAD2;
+HEAD2 -> HEAD3;
+HEAD3 -> HEAD4;
+HEAD4 -> HEAD5;
+SONG1_1 [label="Cancion 1"];
+SONG2_1 [label="Cancion 2"];
+SONG3_1 [label="Cancion 3"];
+HEAD1 -> SONG1_1;
+SONG1_1 -> SONG2_1;
+SONG2_1 -> SONG3_1;
+SONG1_2 [label="Cancion 4"];
+SONG2_2 [label="Cancion 5"];
+SONG3_2 [label="Cancion 6"];
+HEAD2 -> SONG1_2;
+SONG1_2 -> SONG2_2;
+SONG2_2 -> SONG3_2;
+SONG1_3 [label="Cancion 7"];
+SONG2_3 [label="Cancion 8"];
+HEAD3 -> SONG1_3;
+SONG1_3 -> SONG2_3;
+SONG1_4 [label="Cancion 9"];
+SONG2_4 [label="Cancion 10"];
+HEAD4 -> SONG1_4;
+SONG1_4 -> SONG2_4;
+SONG1_5 [label="Cancion 11"];
+HEAD5 -> SONG1_5;
+{ rank=same; SONG1_1 SONG1_2 SONG1_3 SONG1_4 SONG1_5 }
+{ rank=same; SONG2_1 SONG2_2 SONG2_3 SONG2_4 }
+{ rank=same; SONG3_1 SONG3_2 }
+}
