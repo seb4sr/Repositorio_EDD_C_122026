@@ -53,7 +53,7 @@ Un NodoDato representa UN elemento distinto de cero de la matriz.
 Cada NodoDato vive en exactamente UNA fila y UNA columna al mismo tiempo.
 
 Por tanto tiene 4 enlaces:
-![Nodo Dato](/clase4/images/nodo_dato.png)
+![Nodo Dato](/Semana4/images/nodo_dato.png)
 
 * right  --> siguiente NodoDato en la misma FILA (a la derecha)
 * left   --> anterior  NodoDato en la misma FILA (a la izquierda)
