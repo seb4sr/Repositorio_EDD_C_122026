@@ -1,0 +1,26 @@
+digraph AVL {
+    rankdir=TB;
+    node [
+        shape=record,
+        style=filled,
+        fontname="Arial"
+    ];
+
+    n40 [label="{40 | h=4 | bf=1}", fillcolor="#FFF59D"];
+    n20 [label="{20 | h=3 | bf=0}", fillcolor="#A5D6A7"];
+    n5 [label="{5 | h=2 | bf=1}", fillcolor="#FFF59D"];
+    n1 [label="{1 | h=1 | bf=0}", fillcolor="#A5D6A7"];
+    n30 [label="{30 | h=2 | bf=1}", fillcolor="#FFF59D"];
+    n25 [label="{25 | h=1 | bf=0}", fillcolor="#A5D6A7"];
+    n70 [label="{70 | h=2 | bf=0}", fillcolor="#A5D6A7"];
+    n45 [label="{45 | h=1 | bf=0}", fillcolor="#A5D6A7"];
+    n105 [label="{105 | h=1 | bf=0}", fillcolor="#A5D6A7"];
+    n40 -> n20 [label="L"];
+    n20 -> n5 [label="L"];
+    n5 -> n1 [label="L"];
+    n20 -> n30 [label="R"];
+    n30 -> n25 [label="L"];
+    n40 -> n70 [label="R"];
+    n70 -> n45 [label="L"];
+    n70 -> n105 [label="R"];
+}

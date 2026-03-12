@@ -17,13 +17,15 @@ print "-" x 40 . "\n";
 print "INSERTANDO VALORES:\n";
 print "-" x 40 . "\n";
 
-$arbol->insertar(55);
-$arbol->insertar(30);
-$arbol->insertar(70);
+$arbol->insertar(10);
 $arbol->insertar(20);
+$arbol->insertar(30);
+$arbol->insertar(50);
 $arbol->insertar(40);
-$arbol->insertar(60);
-$arbol->insertar(80);
+$arbol->insertar(5);
+$arbol->insertar(1);
+$arbol->insertar(25);
+
 
 
 
