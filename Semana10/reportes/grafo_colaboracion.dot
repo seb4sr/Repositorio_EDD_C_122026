@@ -1,0 +1,37 @@
+graph Colaboracion {
+    rankdir=LR;
+    splines=true;
+    overlap=false;
+    node [
+        shape=ellipse,
+        style=filled,
+        fontname="Arial",
+        fontsize=10
+    ];
+    edge [fontname="Arial", fontsize=9];
+
+    subgraph cluster_leyenda {
+        label="Departamentos";
+        style=dotted;
+        fontname="Arial Bold";
+        ley_med [label="DEP-MED", fillcolor="#AED6F1", shape=box];
+        ley_cir [label="DEP-CIR", fillcolor="#FAD7A0", shape=box];
+        ley_lab [label="DEP-LAB", fillcolor="#F9E79F", shape=box];
+        ley_far [label="DEP-FAR", fillcolor="#A9DFBF", shape=box];
+        ley_sin [label="SIN-DEP", fillcolor="#D5D8DC", shape=box];
+        ley_med -- ley_cir -- ley_lab -- ley_far -- ley_sin [style=invis];
+    }
+
+    COL_101 [label="COL-101\nAna Ramirez\nDEP-MED | TIPO-01\ngrado: 3", fillcolor="#AED6F1"];
+    COL_102 [label="COL-102\nCarlos Mendoza\nDEP-CIR | TIPO-02\ngrado: 2", fillcolor="#FAD7A0"];
+    COL_103 [label="COL-103\nLucia Flores\nDEP-MED | TIPO-03\ngrado: 1", fillcolor="#AED6F1"];
+    COL_105 [label="COL-105\nMaria Lopez\nDEP-FAR | TIPO-03\ngrado: 0", fillcolor="#A9DFBF"];
+    COL_106 [label="COL-106\nJorge Morales\nDEP-CIR | TIPO-02\ngrado: 1", fillcolor="#FAD7A0"];
+    COL_107 [label="COL-107\nSofia Castro\nSIN-DEP | TIPO-01\ngrado: 0", fillcolor="#D5D8DC"];
+    COL_108 [label="COL-108\nDiego Herrera\nDEP-MED | TIPO-01\ngrado: 1", fillcolor="#AED6F1"];
+
+    COL_101 -- COL_102;
+    COL_101 -- COL_103;
+    COL_101 -- COL_108;
+    COL_102 -- COL_106;
+}

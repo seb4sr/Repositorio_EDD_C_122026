@@ -1,0 +1,33 @@
+digraph ListaAdyacencia {
+    rankdir=LR;
+    node [shape=record, style=filled, fontname="Courier", fontsize=10];
+    edge [arrowhead=open];
+
+    COL_101_head [label="{COL-101 | Ana Ramirez}", fillcolor="#AED6F1"];
+    COL_101_v0 [label="{COL-102 | Carlos Mendoza}", fillcolor="#FDFEFE"];
+    COL_101_v1 [label="{COL-103 | Lucia Flores}", fillcolor="#FDFEFE"];
+    COL_101_v2 [label="{COL-108 | Diego Herrera}", fillcolor="#FDFEFE"];
+    COL_101_head -> COL_101_v0;
+    COL_101_v0 -> COL_101_v1;
+    COL_101_v1 -> COL_101_v2;
+    COL_102_head [label="{COL-102 | Carlos Mendoza}", fillcolor="#FAD7A0"];
+    COL_102_v0 [label="{COL-101 | Ana Ramirez}", fillcolor="#FDFEFE"];
+    COL_102_v1 [label="{COL-106 | Jorge Morales}", fillcolor="#FDFEFE"];
+    COL_102_head -> COL_102_v0;
+    COL_102_v0 -> COL_102_v1;
+    COL_103_head [label="{COL-103 | Lucia Flores}", fillcolor="#AED6F1"];
+    COL_103_v0 [label="{COL-101 | Ana Ramirez}", fillcolor="#FDFEFE"];
+    COL_103_head -> COL_103_v0;
+    COL_105_head [label="{COL-105 | Maria Lopez}", fillcolor="#A9DFBF"];
+    COL_105_nil [label="NULL", fillcolor="#F2F3F4"];
+    COL_105_head -> COL_105_nil;
+    COL_106_head [label="{COL-106 | Jorge Morales}", fillcolor="#FAD7A0"];
+    COL_106_v0 [label="{COL-102 | Carlos Mendoza}", fillcolor="#FDFEFE"];
+    COL_106_head -> COL_106_v0;
+    COL_107_head [label="{COL-107 | Sofia Castro}", fillcolor="#D5D8DC"];
+    COL_107_nil [label="NULL", fillcolor="#F2F3F4"];
+    COL_107_head -> COL_107_nil;
+    COL_108_head [label="{COL-108 | Diego Herrera}", fillcolor="#AED6F1"];
+    COL_108_v0 [label="{COL-101 | Ana Ramirez}", fillcolor="#FDFEFE"];
+    COL_108_head -> COL_108_v0;
+}
