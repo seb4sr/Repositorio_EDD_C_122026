@@ -1,0 +1,38 @@
+digraph TablaHash {
+    rankdir=LR;
+    splines=ortho;
+    node [shape=record, style=filled, fontname="Courier", fontsize=10];
+    edge [arrowhead=vee, fontname="Arial", fontsize=9];
+
+    subgraph cluster_leyenda {
+        label="Tipos de Usuario";
+        style=dotted;
+        fontname="Arial Bold";
+        ley_TIPO_01 [label="TIPO-01", fillcolor="#AED6F1", shape=box];
+        ley_TIPO_02 [label="TIPO-02", fillcolor="#FAD7A0", shape=box];
+        ley_TIPO_03 [label="TIPO-03", fillcolor="#A9DFBF", shape=box];
+        ley_TIPO_04 [label="TIPO-04", fillcolor="#F9E79F", shape=box];
+    }
+
+    titulo [label="Tabla Hash\nSize=3 | Total=4 | Colisiones=1 | FC=1.33",
+            shape=box, fillcolor="#EAECEE", fontsize=12];
+
+    bucket_0 [label="{bucket[0] | TIPO-01 | 2 nodo(s)}", fillcolor="#D5D8DC"];
+    bucket_1 [label="{bucket[1] | TIPO-02 | 1 nodo(s)}", fillcolor="#D5D8DC"];
+    bucket_2 [label="{bucket[2] | TIPO-03 | 1 nodo(s)}", fillcolor="#D5D8DC"];
+
+    node_0_0 [label="{COL-10245\nAna Ramirez\nDEP-MED | TIPO-01}", fillcolor="#AED6F1"];
+    node_0_1 [label="{COL-40210\nPedro Alvarado\nDEP-LAB | TIPO-04}", fillcolor="#F9E79F"];
+    bucket_0 -> node_0_0;
+    node_0_0 -> node_0_1;
+    null_0 [label="NULL", fillcolor="#FADBD8"];
+    node_0_1 -> null_0;
+    node_1_0 [label="{COL-20134\nCarlos Mendoza\nDEP-CIR | TIPO-02}", fillcolor="#FAD7A0"];
+    bucket_1 -> node_1_0;
+    null_1 [label="NULL", fillcolor="#FADBD8"];
+    node_1_0 -> null_1;
+    node_2_0 [label="{COL-30101\nLucia Flores\nDEP-MED | TIPO-03}", fillcolor="#A9DFBF"];
+    bucket_2 -> node_2_0;
+    null_2 [label="NULL", fillcolor="#FADBD8"];
+    node_2_0 -> null_2;
+}
