@@ -1,0 +1,84 @@
+{
+  "usuarios": [
+    {
+      "numero_colegio": "COL-10245",
+      "nombre_completo": "Ana Ramírez",
+      "tipo_usuario": "TIPO-01",
+      "departamento": "DEP-MED",
+      "especialidad": "Medicina General",
+      "contrasena": "medgen2026"
+    },
+    {
+      "numero_colegio": "COL-10389",
+      "nombre_completo": "Carlos Mendez",
+      "tipo_usuario": "TIPO-01",
+      "departamento": "DEP-MED",
+      "especialidad": "Medicina Familiar",
+      "contrasena": "carlos2026"
+    },
+    {
+      "numero_colegio": "COL-20134",
+      "nombre_completo": "Laura Cifuentes",
+      "tipo_usuario": "TIPO-02",
+      "departamento": "DEP-CIR",
+      "especialidad": "Cirugía General",
+      "contrasena": "cirgen2026"
+    },
+    {
+      "numero_colegio": "COL-20567",
+      "nombre_completo": "Roberto Salazar",
+      "tipo_usuario": "TIPO-02",
+      "departamento": "DEP-CIR",
+      "especialidad": "Ortopedia",
+      "contrasena": "ortoped2026"
+    },
+    {
+      "numero_colegio": "COL-30412",
+      "nombre_completo": "María Torres",
+      "tipo_usuario": "TIPO-03",
+      "departamento": "DEP-FAR",
+      "especialidad": "Farmacia Hospitalaria",
+      "contrasena": "maria2026"
+    },
+    {
+      "numero_colegio": "COL-30789",
+      "nombre_completo": "Juana López",
+      "tipo_usuario": "TIPO-03",
+      "departamento": "DEP-MED",
+      "especialidad": "Enfermería Clínica",
+      "contrasena": "juana2026"
+    },
+    {
+      "numero_colegio": "COL-40156",
+      "nombre_completo": "Diego Herrera",
+      "tipo_usuario": "TIPO-04",
+      "departamento": "DEP-LAB",
+      "especialidad": "Hematología",
+      "contrasena": "diego2026"
+    },
+    {
+      "numero_colegio": "COL-40890",
+      "nombre_completo": "Sofía Gramajo",
+      "tipo_usuario": "TIPO-04",
+      "departamento": "DEP-LAB",
+      "especialidad": "Microbiología",
+      "contrasena": "sofia2026"
+    },
+    {
+      "numero_colegio": "COL-10677",
+      "nombre_completo": "Pedro Ajú",
+      "tipo_usuario": "TIPO-01",
+      "departamento": null,
+      "especialidad": "Medicina Interna",
+      "contrasena": "pedro2026"
+    },
+    {
+      "numero_colegio": "COL-30321",
+      "nombre_completo": "Valeria Orozco",
+      "tipo_usuario": "TIPO-03",
+      "departamento": "DEP-CIR",
+      "especialidad": "Enfermería Quirúrgica",
+      "contrasena": "valeria2026"
+    }
+  ]
+}

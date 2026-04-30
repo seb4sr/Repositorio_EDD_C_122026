@@ -1,0 +1,95 @@
+digraph LZW {
+    graph [
+        label="Reporte Compresion LZW\nDiccionario Generado durante la Codificacion"
+        fontsize=14
+        rankdir=TB
+    ];
+    node [style=filled fontname="Courier New" fontsize=10];
+    edge [color="#555555" fontsize=9];
+
+    stats [
+        shape=record
+        fillcolor="#B3E5FC"
+        label="{ESTADISTICAS DE COMPRESION | Chars originales: 31 | Codigos emitidos: 21 | Entradas nuevas en dic: 20 | Ratio (chars por codigo): 1.48x | Primeros codigos: [77, 69, 68, 45, 83, 79, 76, 32, ...]}"
+    ];
+
+    dic_256 [
+        shape=record
+        fillcolor="#A5D6A7"
+        label="{dic[256] | patron: 'ME' | W='M'  +  C='E'}"
+    ];
+    dic_257 [
+        shape=record
+        fillcolor="#B2DFDB"
+        label="{dic[257] | patron: 'ED' | W='E'  +  C='D'}"
+    ];
+    dic_258 [
+        shape=record
+        fillcolor="#C8E6C9"
+        label="{dic[258] | patron: 'D-' | W='D'  +  C='-'}"
+    ];
+    dic_259 [
+        shape=record
+        fillcolor="#DCEDC8"
+        label="{dic[259] | patron: '-S' | W='-'  +  C='S'}"
+    ];
+    dic_260 [
+        shape=record
+        fillcolor="#FFF9C4"
+        label="{dic[260] | patron: 'SO' | W='S'  +  C='O'}"
+    ];
+    dic_261 [
+        shape=record
+        fillcolor="#FFE082"
+        label="{dic[261] | patron: 'OL' | W='O'  +  C='L'}"
+    ];
+    dic_262 [
+        shape=record
+        fillcolor="#FFCC80"
+        label="{dic[262] | patron: 'L ' | W='L'  +  C=' '}"
+    ];
+    dic_263 [
+        shape=record
+        fillcolor="#FFAB91"
+        label="{dic[263] | patron: ' M' | W=' '  +  C='M'}"
+    ];
+    dic_264 [
+        shape=record
+        fillcolor="#F48FB1"
+        label="{dic[264] | patron: 'MED' | W='ME'  +  C='D'}"
+    ];
+    dic_265 [
+        shape=record
+        fillcolor="#CE93D8"
+        label="{dic[265] | patron: 'D-S' | W='D-'  +  C='S'}"
+    ];
+    dic_266 [
+        shape=record
+        fillcolor="#90CAF9"
+        label="{dic[266] | patron: 'SOL' | W='SO'  +  C='L'}"
+    ];
+    dic_267 [
+        shape=record
+        fillcolor="#80DEEA"
+        label="{dic[267] | patron: 'L M' | W='L '  +  C='M'}"
+    ];
+    dic_resto [
+        shape=box
+        fillcolor="#EEEEEE"
+        label="... 8 entradas adicionales ..."
+    ];
+
+    stats -> dic_256 [label="dic generado"];
+    dic_256 -> dic_257;
+    dic_257 -> dic_258;
+    dic_258 -> dic_259;
+    dic_259 -> dic_260;
+    dic_260 -> dic_261;
+    dic_261 -> dic_262;
+    dic_262 -> dic_263;
+    dic_263 -> dic_264;
+    dic_264 -> dic_265;
+    dic_265 -> dic_266;
+    dic_266 -> dic_267;
+    dic_267 -> dic_resto;
+}

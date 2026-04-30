@@ -1,0 +1,67 @@
+[
+  {
+    "solicitante": "COL-10245",
+    "receptor": "COL-10389",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-10245",
+    "receptor": "COL-30789",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-10389",
+    "receptor": "COL-30789",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-20134",
+    "receptor": "COL-20567",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-20134",
+    "receptor": "COL-30321",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-20567",
+    "receptor": "COL-30321",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-40156",
+    "receptor": "COL-40890",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-10245",
+    "receptor": "COL-20134",
+    "estado": "ACTIVA"
+  },
+  {
+    "solicitante": "COL-30412",
+    "receptor": "COL-10245",
+    "estado": "PENDIENTE"
+  },
+  {
+    "solicitante": "COL-40156",
+    "receptor": "COL-20134",
+    "estado": "PENDIENTE"
+  },
+  {
+    "solicitante": "COL-10677",
+    "receptor": "COL-30789",
+    "estado": "PENDIENTE"
+  },
+  {
+    "solicitante": "COL-20567",
+    "receptor": "COL-40890",
+    "estado": "RECHAZADA"
+  },
+  {
+    "solicitante": "COL-30412",
+    "receptor": "COL-40156",
+    "estado": "RECHAZADA"
+  }
+]

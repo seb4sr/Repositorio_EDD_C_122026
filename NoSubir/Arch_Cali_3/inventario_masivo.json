@@ -1,0 +1,181 @@
+{
+  "proveedor": [
+    {
+      "nit": "12345678-1",
+      "nombre": "FarmaGT Distribuciones",
+      "telefono": "2201-1100",
+      "direccion": "Zona 4, Ciudad de Guatemala",
+      "fecha_entrega": "2026-03-10",
+      "numero_factura": "FAC-2026-00201",
+      "entrega": [
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-001",
+          "nombre": "Amoxicilina 500mg",
+          "principio_activo": "Amoxicilina",
+          "fabricante": "LabFarma",
+          "precio_unitario": 1.80,
+          "cantidad": 8000,
+          "fecha_vencimiento": "2027-06-30",
+          "nivel_minimo": 800
+        },
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-002",
+          "nombre": "Ibuprofeno 400mg",
+          "principio_activo": "Ibuprofeno",
+          "fabricante": "LabFarma",
+          "precio_unitario": 0.90,
+          "cantidad": 12000,
+          "fecha_vencimiento": "2027-09-15",
+          "nivel_minimo": 1000
+        },
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-003",
+          "nombre": "Metformina 850mg",
+          "principio_activo": "Metformina",
+          "fabricante": "GenericLab",
+          "precio_unitario": 1.20,
+          "cantidad": 6000,
+          "fecha_vencimiento": "2027-03-01",
+          "nivel_minimo": 600
+        },
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-004",
+          "nombre": "Omeprazol 20mg",
+          "principio_activo": "Omeprazol",
+          "fabricante": "GenericLab",
+          "precio_unitario": 1.10,
+          "cantidad": 10000,
+          "fecha_vencimiento": "2027-04-25",
+          "nivel_minimo": 1000
+        },
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-005",
+          "nombre": "Azitromicina 500mg",
+          "principio_activo": "Azitromicina",
+          "fabricante": "FarmacentroGT",
+          "precio_unitario": 3.40,
+          "cantidad": 3000,
+          "fecha_vencimiento": "2027-02-14",
+          "nivel_minimo": 300
+        },
+        {
+          "tipo": "EQUIPO",
+          "codigo": "EQU-001",
+          "nombre": "Monitor de Signos Vitales",
+          "fabricante": "MediTechGT",
+          "precio_unitario": 4500.00,
+          "cantidad": 10,
+          "fecha_ingreso": "2026-03-10",
+          "nivel_minimo": 2
+        },
+        {
+          "tipo": "EQUIPO",
+          "codigo": "EQU-002",
+          "nombre": "Electrocardiógrafo 12 Derivaciones",
+          "fabricante": "MediTechGT",
+          "precio_unitario": 6200.00,
+          "cantidad": 5,
+          "fecha_ingreso": "2026-03-10",
+          "nivel_minimo": 1
+        },
+        {
+          "tipo": "EQUIPO",
+          "codigo": "EQU-003",
+          "nombre": "Bomba de Infusión Volumétrica",
+          "fabricante": "BuenaVidaGT",
+          "precio_unitario": 1800.00,
+          "cantidad": 20,
+          "fecha_ingreso": "2026-03-10",
+          "nivel_minimo": 5
+        },
+        {
+          "tipo": "SUMINISTRO",
+          "codigo": "SUM-001",
+          "nombre": "Guantes de Nitrilo Talla M",
+          "fabricante": "MediSupplyGT",
+          "precio_unitario": 0.12,
+          "cantidad": 60000,
+          "fecha_vencimiento": "2028-06-30",
+          "nivel_minimo": 6000
+        },
+        {
+          "tipo": "SUMINISTRO",
+          "codigo": "SUM-002",
+          "nombre": "Mascarilla Quirúrgica",
+          "fabricante": "MediSupplyGT",
+          "precio_unitario": 0.25,
+          "cantidad": 40000,
+          "fecha_vencimiento": "2028-01-15",
+          "nivel_minimo": 4000
+        }
+      ]
+    },
+    {
+      "nit": "23456789-2",
+      "nombre": "MediSupply Central S.A.",
+      "telefono": "2334-5566",
+      "direccion": "Zona 12, Ciudad de Guatemala",
+      "fecha_entrega": "2026-03-12",
+      "numero_factura": "FAC-2026-00215",
+      "entrega": [
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-006",
+          "nombre": "Paracetamol 500mg",
+          "principio_activo": "Paracetamol",
+          "fabricante": "GenericLab",
+          "precio_unitario": 0.75,
+          "cantidad": 15000,
+          "fecha_vencimiento": "2027-12-31",
+          "nivel_minimo": 1500
+        },
+        {
+          "tipo": "MEDICAMENTO",
+          "codigo": "MED-007",
+          "nombre": "Diclofenaco 75mg Inyectable",
+          "principio_activo": "Diclofenaco Sódico",
+          "fabricante": "FarmacentroGT",
+          "precio_unitario": 3.20,
+          "cantidad": 4000,
+          "fecha_vencimiento": "2027-07-20",
+          "nivel_minimo": 400
+        },
+        {
+          "tipo": "EQUIPO",
+          "codigo": "EQU-004",
+          "nombre": "Tensiómetro Manual Aneroide",
+          "fabricante": "BuenaVidaGT",
+          "precio_unitario": 180.00,
+          "cantidad": 20,
+          "fecha_ingreso": "2026-03-12",
+          "nivel_minimo": 4
+        },
+        {
+          "tipo": "SUMINISTRO",
+          "codigo": "SUM-003",
+          "nombre": "Jeringas 10ml con Aguja",
+          "fabricante": "MediSupplyGT",
+          "precio_unitario": 0.55,
+          "cantidad": 25000,
+          "fecha_vencimiento": "2029-12-01",
+          "nivel_minimo": 2500
+        },
+        {
+          "tipo": "SUMINISTRO",
+          "codigo": "SUM-INVALID",
+          "nombre": "Suministro Dato Inválido",
+          "fabricante": "",
+          "precio_unitario": -1.00,
+          "cantidad": -500,
+          "fecha_vencimiento": "2019-01-01",
+          "nivel_minimo": -100
+        }
+      ]
+    }
+  ]
+}
